@@ -45,5 +45,5 @@ jobs:
     
     steps:
     
-      - name: Step 1 - Running python file
-        run: python ./main.py
+      - name: Step 1 - Checking ENVs
+        run: env
