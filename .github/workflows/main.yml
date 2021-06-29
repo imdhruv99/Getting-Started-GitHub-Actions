@@ -11,7 +11,7 @@ on:
 
 jobs:
 
-  build:
+  build-on-ubuntu:
 
     runs-on: ubuntu-latest
 
@@ -29,21 +29,19 @@ jobs:
       - name: Step 4 - Checking Opering-System's version and Hostname
         run: hostnamectl
   
-  build-on-ubuntu:
+  build-on-windows:
     
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     
     steps:
     
       - name: Step 1 - Checking contents in folder
-        run: ls -a
+        run: ls
       
-      
-  running-python-file:
-    
-    runs-on: ubuntu-latest
-    
-    steps:
-    
-      - name: Step 1 - Checking ENVs
-        run: env
+      - name: Step 2 - Checkout the main github branch
+        uses: actions/checkout@v2
+        
+      - name: Step 3 - Check windows execution policy
+        run: |
+          echo Here is the windows execution ploicy
+          Get-ExecutionPolicy
