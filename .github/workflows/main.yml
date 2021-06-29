@@ -47,13 +47,15 @@ jobs:
           
           echo 6. What is the workspace location?
           echo $RUNNER_WORKSPACE
+          echo
           
           echo 7. Who is running this script?
           whoami
           echo
           
           echo 8. How is the disc laid out?
-          df
+          df -h
+          echo
           
           echo 9. Is python installed?
           python --version
