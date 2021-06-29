@@ -36,7 +36,14 @@ jobs:
     steps:
     
       - name: Step 1 - Checking contents in folder
-        run: python main.py
+        run: ls -a
       
-      - name: Step 2 - Running shell script
-        run: sh ./github-actions-script.sh
+      
+  running-python-file:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+    
+      - name: Step 1 - Running python file
+        run: python ./main.py
