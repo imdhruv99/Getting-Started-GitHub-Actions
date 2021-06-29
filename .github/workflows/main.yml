@@ -28,3 +28,15 @@ jobs:
         
       - name: Step 4 - Checking Opering-System's version and Hostname
         run: hostnamectl
+  
+  build-on-ubuntu:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+    
+      - name: Step 1 - Checking contents in folder
+        run: python main.py
+      
+      - name: Step 2 - Running shell script
+        run: sh ./github-actions-script.sh
