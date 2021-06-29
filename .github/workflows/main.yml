@@ -20,11 +20,11 @@ jobs:
       - name: Step 1 - Logging Disc Space
         run: df -h
         
-      - name: Checkout the main github branch
+      - name: Step 2 - Checkout the main github branch
         uses: actions/checkout@v2
       
-      - name: Checking python version
+      - name: Step 3 - Checking python version
         run: python --version
         
-      - name: Checking Opering-System's version and Hostname
+      - name: Step 4 - Checking Opering-System's version and Hostname
         run: hostnamectl
