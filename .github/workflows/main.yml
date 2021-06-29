@@ -55,8 +55,5 @@ jobs:
           echo 8. How is the disc laid out?
           df
           
-          echo 9. Is python2 installed?
+          echo 9. Is python installed?
           python --version
-          
-          echo 10. Is python3 installed?
-          python3 --version
